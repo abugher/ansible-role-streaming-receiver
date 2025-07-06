@@ -1,0 +1,16 @@
+---
+install_files:
+  - owner:                      'root'
+    group:                      'root'
+    mode:                       '0644'
+    src:                        'files/lesbonscomptes.gpg'
+    dest:                       '/usr/share/keyrings/lesbonscomptes.gpg'
+template_files:
+  - owner:                      'root'
+    group:                      'root'
+    mode:                       '0644'
+    src:                        'templates/upmpdcli.list.j2'
+    dest:                       '/etc/apt/sources.list.d/upmpdcli.list'
+install_packages:
+  - 'upmpdcli'
+  - 'mpd'
